@@ -57,8 +57,41 @@ Making sure we understanding the pneumonia spread in these images will help us t
 ___
 ## Model Results
 
-_Text blurb on model results_
+### Metrics for Success  
+---
+#### Phase 1 Metrics
+The first phase of this project will deal with separating each image into one of three classes: healthy, pneumonia, and non-healthy/non-pneumonia.  
+For this multiclass classification task, there are a few metrics that can measure just how successful our machine learning model is.  
+These include: 
 
+> **Accuracy:**  The number of correct predictions divided by the number of all samples.  This can be deduced by the following formula:  
+>  
+> *Accuracy =* $\frac{TP+TN}{TP+TN+FP+FN}$  
+> 
+> **Precision:**  Also known as *positive predictive value (PPV)*, measures how many of the samples predicted as positive are *actually* positive.  This is best used as a performance metric when the goal is to limit the number of false positives.  This can be deduced by the following formula:  
+>   
+> *Precision =* $\frac{TP}{TP+FP}$
+>  
+> **Recall:**  Also known as *sensitivity, hit rate, or true positive rate (TPR)*, measures how many of the positive samples are captured by the positive predictions.  This is best used when there is a need to identify all positive samples; that is, when it is important to avoid false negatives.  This can be deduced by the following formula:  
+>  
+>  *Recall =* $\frac{TP}{TP+FN}$
+>  
+> **F-score:**  While precision and recall are very important measures, looking at only one of them won't provide the full picture of our data.  One way to summarize the two is with the *f-score*, which is the harmonic mean of precision and recall:  
+>  
+> *F =* **2** $\times$ $\frac{Precision \times Recall}{Precision+Recall}$
+>  
+> *TP: True Positives, TN: True Negatives, FP: False Positives, FN: False Negatives*  
+
+For our purposes, the F-score is our most important metric.  If the purpose of this project is to minimize the workload of medical staff, it would be counter-intuitive to allow too many false positives, as this will prompt follow-on analysis from the staff; thus, we will need to ensure a high Precision score.  However, with our model circling around an infection that has such dire consequences if not treated, false negatives cannot be permitted; thus, wew will also need a high recall score.  
+It will be important to look at both precision and recall individually, but the F-score will be a neat summary of the two that we can use to standardize our progress.
+
+---
+#### Phase 2 Metrics
+The second phase of this project will involve identifying the "trouble areas" of those lungs placed in the pneumonia class.  
+
+_To be completed_
+
+---
 #### Key Metrics from the Bounding Box Detector *(Bounding Box Predictor (CNN).ipynb)*
 🔧 _Image incoming_ 🔧
 
