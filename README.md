@@ -65,21 +65,21 @@ The first phase of this project will deal with separating each image into one of
 For this multiclass classification task, there are a few metrics that can measure just how successful our machine learning model is.  
 These include: 
 
-> **Accuracy:**  The number of correct predictions divided by the number of all samples.  This can be deduced by the following formula:  
+> **Accuracy:**  The number of correct predictions divided by the number of all samples.  This can be deduced by the following formula: 
 >  
-> $Accuracy = \frac{TP+TN}{TP+TN+FP+FN}$  
+> <img src="https://render.githubusercontent.com/render/math?math=Accuracy = \frac{TP%2BTN}{TP%2BTN%2BFP%2BFN}">
 > 
 > **Precision:**  Also known as *positive predictive value (PPV)*, measures how many of the samples predicted as positive are *actually* positive.  This is best used as a performance metric when the goal is to limit the number of false positives.  This can be deduced by the following formula:  
 >   
-> $Precision = \frac{TP}{TP+FP}$
+> <img src="https://render.githubusercontent.com/render/math?math=Precision = \frac{TP}{TP%2BFP}">
 >  
 > **Recall:**  Also known as *sensitivity, hit rate, or true positive rate (TPR)*, measures how many of the positive samples are captured by the positive predictions.  This is best used when there is a need to identify all positive samples; that is, when it is important to avoid false negatives.  This can be deduced by the following formula:  
 >  
-> $Recall = \frac{TP}{TP+FN}$
+> <img src="https://render.githubusercontent.com/render/math?math=Recall = \frac{TP}{TP%2BFN}">
 >  
 > **F-score:**  While precision and recall are very important measures, looking at only one of them won't provide the full picture of our data.  One way to summarize the two is with the *f-score*, which is the harmonic mean of precision and recall:  
 >  
-> $F = 2 \times \frac{Precision \times Recall}{Precision+Recall}$
+> <img src="https://render.githubusercontent.com/render/math?math=F = 2 \times \frac{Precision \times Recall}{Precision%2BRecall}">
 >  
 > *TP: True Positives, TN: True Negatives, FP: False Positives, FN: False Negatives*  
 
