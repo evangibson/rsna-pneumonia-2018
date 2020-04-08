@@ -42,10 +42,17 @@ def main():
     mapper['class'].replace("No Lung Opacity / Not Normal", "2", inplace=True)
     mapper['class'].replace("Lung Opacity", "1", inplace=True)
     mapper['class'].replace("Normal", "0", inplace=True)
-    print(mapper)
 
+    # Prepare to manipulate the dicom files
+    file_object = fw.FileWiz(mapper, path_to_train_files)
+    file_object.classgrab("patientId", verbose=False)
+    file_object.foldermove(os.path.join(os.getcwd(), "projectfiles", "rsna-pneumonia-detection-challenge"),
+                           train_folder_name="train",
+                           val_folder_name="validation",
+                           tra_t_split=0.2,
+                           extension_type=".dcm",
+                           activate=True)
 
-#fw.FileWiz
 
 # Run main()
 if __name__ == "__main__":
