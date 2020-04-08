@@ -1,7 +1,7 @@
 # Kaggle Pneumonia Detection Challenge
 A folder for the [RSNA Pneumonia Prediction Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge)
 
-Authors: [Evan Gibson](https://github.com/evangibson), [Derek Turner](https://github.com/turnerdj95), and Thomas Nakrosis.
+Authors: [Evan Gibson](https://github.com/evangibson), [Derek Turner](https://github.com/turnerdj95), and [Thomas Nakrosis](https://github.com/Tnakrosis).
 
 ___
 
