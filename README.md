@@ -24,13 +24,13 @@ It's important to understand the data in our DICOM (.dcm) files before we dive i
 
 ```python
 import pydicom
-dcm_file = path/to/dicom/file.dcm
+dcm_file = 'path/to/dicom/file.dcm'
 dcm_data = pydicom.read_file(dcm_file)
 print(dcm_data)
 ```
 ```
 (0008, 0005) Specific Character Set              CS: 'ISO_IR 100'
-(0008, 0016) SOP Class UID                       UI: Secondary Capture Image Storage\n",
+(0008, 0016) SOP Class UID                       UI: Secondary Capture Image Storage,
 (0008, 0018) SOP Instance UID                    UI: 1.2.276.0.7230010.3.1.4.8323329.1556.1517874291.545552
 (0008, 0020) Study Date                          DA: '19010101'
 (0008, 0030) Study Time                          TM: '000000.00'
