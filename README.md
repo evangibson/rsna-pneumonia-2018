@@ -127,7 +127,37 @@ It will be important to look at both precision and recall individually, but the 
 #### Phase 2 Metrics
 The second phase of this project will involve identifying the "trouble areas" of those lungs placed in the pneumonia class.  
 
-_To be completed_
+Data is transmitted and understood by computers as a series of ones and zeros - otherwise known as *binary* - and this doesn't stop with images:
+
+To store an image on a computer, the image is broken into elements called pixels (short for picture element) - which represent one color each.  This is where binary comes into play.  In order for the computer to store images, each pixel is represented by a binary value.  This representation of colors is called the *bit-plane*.  
+
+> The bit-plane essentially defines the number of available colors in the image - each bit doubles the amount of colors the image can have.  For example, 1-bit would give us two colors, 2-bit would give us 4, 3-bit would give us 8, etc...
+
+##### Computer vision  
+
+Like teaching a newborn what something is in the world, we also have to teach our computers what an object is using the same approach - through *examples*.  
+
+After an image is stored on a computer, it still has no idea what the image *actually* is - outside of the binary array that it is stored as.  This is where computer vision comes into play.
+
+The next step in having your computer identify what it's looking at is by training it to do so.  This is done by feeding your computer thousands (or more) of labeled or pre-identified images.  These images are used to train deep-learning models, which essentially automate the process of learning what series of bits correlate to which images.
+
+Today there are a plethora of computer vision types that are used in different ways, here are a few:
+
+> **Image segmentation**: partitions an image into multiple regions or pieces that will be examined separately.  
+>
+> **Object detection**: Identifies a specific object in an image.  Advanced object detection can recognize many objects in a single image.  These models use an X,Y coordinate to create a *bounding box* and identify everything inside the box.  
+> 
+> **Facial recognition**:  An advanced type of object detection that recognizes a human face in an image, while also identifying specific individuals.  
+> 
+> **Edge detection**: Used to identify the outside edge of an object or landscape to better identify what is in the image.  
+> 
+> **Pattern detection**: A process of recognizing repeated shapes, colors, and other visual indicators in images.  
+> 
+> **Image classification**: Groups images into different categories  
+> 
+> **Feature matching**: A type of pattern detection that matches similarities in images to help classify them.  
+
+For our purposes, we will be mostly concerned with the different algorithms designed for object detection - using a bounding box to identify which areas of pneumonia-riddled lungs are unhealthy.  
 
 ---
 #### Key Metrics from the Bounding Box Detector *(Bounding Box Predictor (CNN).ipynb)*
