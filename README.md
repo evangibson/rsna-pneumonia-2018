@@ -72,7 +72,7 @@ Understanding the data from the DICOM files is imperative to being able to ensur
 
 Now that we have visualized the bounding boxes and the XRAYs, we should take a look at the demographics of our study participants.
 
-#### [Frequency Chart of Detailed Class (Colored by Binary Class)](https://github.com/evangibson/rsna-pneumonia-2018/tree/master/reference_files/binary_freq_chart.png?raw=true)  
+#### [Frequency Chart of Detailed Class (Colored by Binary Class)](https://github.com/evangibson/rsna-pneumonia-2018/tree/master/reference_files/detailed_freq_chart.png?raw=true)  
 
 #### [Frequency Chart of Binary Class (Colored by Binary Class)](https://github.com/evangibson/rsna-pneumonia-2018/tree/master/reference_files/binary_freq_chart.png?raw=true)  
 
