@@ -157,10 +157,30 @@ Today there are a plethora of computer vision types that are used in different w
 > 
 > **Feature matching**: A type of pattern detection that matches similarities in images to help classify them.  
 
+##### Measuring Accuracy
 For our purposes, we will be mostly concerned with the different algorithms designed for object detection - using a bounding box to identify which areas of pneumonia-riddled lungs are unhealthy.  
 
+Part 1 of our project deals with the first objective of object detection, or *classification* - identifying whether or not an object is present in the image and the class of the object.  Part 2 of our project will focus on *localization* - predicting the coordinates of the bounding box around the object if that object is in the image.
+
+To measure performance of our object detection model, we will use the concept of Intersection over Union (IoU), depicted by the image below:
+<p align="left">
+  <img width="380" height="280" src="Images/IoU.png?raw=true "Detailed Frequency Chart">
+</p>
+
+IoU is an evaluation metric used to measure the accuracy of an object detection model on a particular dataset.  In the image above, the red box depicts the *ground truth bounding box* of our desired object, while the green box depicts the *predicted bounding box* from our model.  
+
+Computing Intersection over Union can be determined from the following formula:  
+<img src="https://render.githubusercontent.com/render/math?math=IoU = \frac{Area of Overlap}{Area of Union}">
+
+In the numerator, we compute the area of overlap between the *predicted* bounding box and *ground-truth* bounding box.  
+
+In the denominator, the area encompassed by both the predicted bounding box and ground-truth bounding box is computed.  
+
+An IoU of 1 would be a perfectly correct prediction.
+
 ---
-#### Key Metrics from the Bounding Box Detector *(Bounding Box Predictor (CNN).ipynb)*
+#### Key Metrics from the Bounding Box Detector *(Bounding Box Predictor (CNN).ipynb)*  
+
 🔧 _Image incoming_ 🔧
 
 #### Key Metrics from a Binary Classifier *(Binary Classifier 2.ipynb)*
