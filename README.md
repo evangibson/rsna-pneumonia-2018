@@ -170,7 +170,8 @@ To measure performance of our object detection model, we will use the concept of
 IoU is an evaluation metric used to measure the accuracy of an object detection model on a particular dataset.  In the image above, the red box depicts the *ground truth bounding box* of our desired object, while the green box depicts the *predicted bounding box* from our model.  
 
 Computing Intersection over Union can be determined from the following formula:  
-> <img src="https://render.githubusercontent.com/render/math?math=IoU = \frac{Area  Of  Overlap}{Area  Of  Union}">
+> <img src="https://render.githubusercontent.com/render/math?math=IoU = \frac{Area  Of  Overlap}{Area  Of  Union}">  
+>  
 > In the numerator, we compute the area of overlap between the *predicted* bounding box and *ground-truth* bounding box.  
 > In the denominator, the area encompassed by both the predicted bounding box and ground-truth bounding box is computed.  
 
