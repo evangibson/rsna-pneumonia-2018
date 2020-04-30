@@ -72,7 +72,7 @@ Understanding the data from the DICOM files is imperative to being able to ensur
 
 Now that we have visualized the bounding boxes and the XRAYs, we should take a look at the demographics of our study participants.
 
-<p align="center">
+<p align="left">
   <h4> Frequency Chart of Detailed Class (Colored by Binary Class) </h4>
   <img width="280" height="100" src="Images/detailed_freq_chart.png?raw=true "Detailed Frequency Chart">
   
