@@ -74,11 +74,13 @@ Now that we have visualized the bounding boxes and the XRAYs, we should take a l
 
 <p align="center">
   <h4> Frequency Chart of Detailed Class (Colored by Binary Class) </h4>
-  <img width="240" height="100" src="Images/detailed_freq_chart.png?raw=true "Detailed Frequency Chart">
+  <img width="280" height="100" src="Images/detailed_freq_chart.png?raw=true "Detailed Frequency Chart">
+  
   <h4> Frequency Chart of Binary Class (Colored by Binary Class) </h4>
-  <img width="240" height="100" src="Images/binary_freq_chart.png?raw=true "Binary Frequency Chart">
+  <img width="280" height="100" src="Images/binary_freq_chart.png?raw=true "Binary Frequency Chart">
+  
   <h4> Frequency Chart of Sex (Colored by Binary Class) </h4>
-  <img width="240" height="100" src="Images/sex_freq_chart.png?raw=true "Sex Frequency Chart">
+  <img width="350" height="140" src="Images/sex_freq_chart.png?raw=true "Sex Frequency Chart">
 </p>
   
 Ensuring that we maintain reasonably consistent demographic spreads when determining training and test sets will be imperative. Exploratory analysis will assist in that effort.
