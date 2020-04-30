@@ -171,9 +171,7 @@ IoU is an evaluation metric used to measure the accuracy of an object detection 
 
 Computing Intersection over Union can be determined from the following formula:  
 > <img src="https://render.githubusercontent.com/render/math?math=IoU = \frac{Area  Of  Overlap}{Area  Of  Union}">
-
 > In the numerator, we compute the area of overlap between the *predicted* bounding box and *ground-truth* bounding box.  
-
 > In the denominator, the area encompassed by both the predicted bounding box and ground-truth bounding box is computed.  
 
 An IoU of 1 would be a perfectly correct prediction.
