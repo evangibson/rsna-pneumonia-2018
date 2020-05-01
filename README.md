@@ -85,7 +85,7 @@ Now that we have visualized the bounding boxes and the XRAYs, we should take a l
   
 Ensuring that we maintain reasonably consistent demographic spreads when determining training and test sets will be imperative. Exploratory analysis will assist in that effort.
 
-Making sure we understanding the pneumonia spread in these images will help us to identify anomalies in our predictions.
+Making sure we understand the pneumonia spread in these images will help us to identify anomalies in our predictions.
 
 #### Heatmap of Pneumonia Presence in the Sample Images
 🔧 _Image incoming_ 🔧
