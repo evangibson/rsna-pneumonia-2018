@@ -1,28 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-
-==========
-Created on 4/7/2020 at 9:55 PM
-==========
-Name: fileprep_classification.py
-==========
-Description: This script is deisgned to move files from their original folders to class-based folders.
-==========
-
-"""
-
-# Library Imports
-
-import pandas as pd
-import os
-import shutil
-from sklearn.model_selection import train_test_split
-import tqdm
-import numpy as np
-import png
-
-# -*- coding: utf-8 -*-
-"""
 ==========
 Created on 4/7/2020 at 9:55 PM
 ==========
