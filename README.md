@@ -1,7 +1,7 @@
 # Kaggle Pneumonia Detection Challenge
 A folder for the [RSNA Pneumonia Prediction Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge)
 
-Authors: [Evan Gibson](https://github.com/evangibson), [Derek Turner](https://github.com/turnerdj95), and [Thomas Nakrosis](https://github.com/Tnakrosis).
+Authors: [Evan Gibson](https://github.com/evangibson), [Derek Turner](https://github.com/turnerdj95), Stephanie Ludovici, and [Thomas Nakrosis](https://github.com/Tnakrosis).
 
 ___
 
@@ -93,6 +93,28 @@ Making sure we understand the pneumonia spread in these images will help us to i
 ___
 ## Model Results
 
+### Pretraining Considerations
+
+
+#### Overtraining
+Overfitting and underfitting can occur in machine learning and are sometimes called "overtraining" and "undertraining".
+
+Overfitting of a data training set will result in an increased generalization error. This makes the model less useful at making predictions on new data.  Overfitting exists when a model contains more parameters than can be justified by the data or matches too closely or exactly to a particular set of data. This can lead to the model’s failure to fit other data or predict additional observations reliably, resulting in Type I or Type II errors.  Think of this similar to using keywords in a search engine: use the wrong keywords, and you either get everything that is not related, or nothing. A model should be trained and fitted in the proverbial “goldilocks zone” – not too much, not too little.
+
+Underfitting a data training set results in increased bias. Here, the model does not contain enough information to base new data. Underfitting a model occurs when some parameters or terms that would appear in a correctly specified model are missing.
+
+##### Avoiding overtraining or undertraining
+
+Overfitting can be identified by checking validation metrics such as accuracy and loss. The validation metrics typically increase until it reaches a plateau or begins declining due to overfitting. Alternately, since underfitting occurs when a statistical model cannot adequately capture the underlying structure of the data, the validation metrics will tend to have poor to null predictive performance.
+
+Earlier, it was mentioned that noise, bias and variance are the main causes of model learning error. Underfitting is the result of high bias in a model. Overfitting is the result of high variance in a model.  Noise influences overfitting by introducing additional observations that are then considered in the model during training, rather than the intended outputs. This dilemma for balancing these conflicts is known as the bias-variance dilemma.
+
+Model validation can be used to confirm that the statistical model are well-fitted to meet the desired objectives.
+
+Model validation can be based on two types of data: data that was used in the construction of the model and data that was not used in the construction. Validation based on the first type usually involves analyzing the goodness of fit of the model or analyzing whether the residuals seem to be random (i.e. residual diagnostics). Validation based on the second type usually involves analyzing whether the model's predictive performance deteriorates non-negligibly when applied to pertinent new data.
+
+
+
 ### Metrics for Success  
 ---
 #### Phase 1 Metrics
@@ -125,15 +147,35 @@ It will be important to look at both precision and recall individually, but the 
 
 ---
 #### Phase 2 Metrics
-The second phase of this project will involve identifying the "trouble areas" of those lungs placed in the pneumonia class.  
+The second phase of this project will involve identifying the "trouble areas" of those lungs placed in the pneumonia class.  In the present example, our team uses ensemble modelling to build off of the results of the phase 1 model. 
+
+
+##### What is “ensemble modeling”?
+
+Ensemble modeling in machine learning combines the results from multiple learning algorithms to improve the overall stability, accuracy, and predictive performance than a single learning algorithm would yield alone.  Ensemble methods help to minimize the main causes of error in learning models: noise, bias, and variance. 
+
+Ensemble learning methods employ a group of models where the combined result out of them is almost always better in terms of prediction accuracy as compared to using a single model.  Combining multiple models decreases unexplained variance and may produce a more reliable prediction than a single model.  We use “is almost always” and “may” because each model should be designed specifically for the situation for which it is tended. Using ensemble modeling does not guarantee that combining models is the optimal approach.
+
+Ensemble models can be implemented in use-cases for linear as well as non-linear relationships in data. by using one for each model type and forming an ensemble of the two.
+
+Although ensemble methods are more robust, stable, and accurate, using them can impact the audience’s interpretation of results and increase model complexity. Design and computation timelines could increase.  However, using a variety of strong learning algorithms rather than over-simplifying a model in favor of diversity has proven to be more effective and produces better results. Provided there is choice of models of similar predictive or explanatory power, the simplest model is most likely to be the best choice (Occam's razor). Balancing model selection and weighing resources to output requires practice, thought, and skill and can be difficult to master.
+
+##### How can an ensemble approach help researchers tackle complex problems?
+There is no “one size fits all” in modelling.  Ensemble modeling is a method of supervised learning since it is trained and then used to make predictions. This trained model, in turn, represents a single hypothesis.  Hypotheses should not always be constrained to the parameters of a single model and can often be better represented through several different models. This is where ensemble modeling offers more flexibility in functions they can represent. It is through this flexibility that researchers can tackle complex problems; allowing the combination of different relationships (linear vs. non-linear) and the weighted outcome of results from multiple algorithms to illustrate the relationships and correlation within the data.
+
+The flexibility found in ensemble modeling can enable the overtraining, or overfitting, of training data more than a single model would; however, some techniques such as bagging and boosting tend to reduce problems related to overfitting of the model.
+“Bagging”, or Bootstrap AGGregatING, is created to expose each model a different subset of data. The collective output at the end of training is used to reduce overfitting, similar to the concept of taking the mean of a group of results. Bagging helps reduce the error in variance.
+
+“Boosting” is an iterative technique that consists of a weak classifier’s weight adjustment for a distribution based on the classification of the last.  For each iteration, the data weights are readjusted. Boosting relies on creating a series of weak classifiers that are only slightly correlated with the true classification in the data but are good for some part of it. Each weak classifier actually boosts the performance of the whole ensemble (strong and weak classifiers).  In short, it builds a more detailed picture of the classification and distribution of the data. Boosting in general decreases the bias error and builds strong predictive models and has shown better predictive accuracy than bagging.  However, it tends to overfit the training data. Thus, parameter tuning becomes a crucial part of boosting algorithms to make them avoid overfitting.
+
+
+##### Computer vision  
 
 Data is transmitted and understood by computers as a series of ones and zeros - otherwise known as *binary* - and this doesn't stop with images:
 
 To store an image on a computer, the image is broken into elements called pixels (short for picture element) - which represent one color each.  This is where binary comes into play.  In order for the computer to store images, each pixel is represented by a binary value.  This representation of colors is called the *bit-plane*.  
 
 > The bit-plane essentially defines the number of available colors in the image - each bit doubles the amount of colors the image can have.  For example, 1-bit would give us two colors, 2-bit would give us 4, 3-bit would give us 8, etc...
-
-##### Computer vision  
 
 Like teaching a newborn what something is in the world, we also have to teach our computers what an object is using the same approach - through *examples*.  
 
